@@ -16,7 +16,7 @@ public class Employe {
     String department;
 
     double upSalary() {
-        return salary = salary * 2;
+        return salary *= 2;
     }
 }
 

@@ -8,11 +8,26 @@ public class Student {
     double avrMathematic;
     double avrEconomic;
     double avrEnglish;
-    double avrAll;
+
+    double abc (){
+        double result = (avrMathematic + avrEconomic + avrEnglish) /3;
+        return result;
+    }
 
 }
 
 class StudentTest {
+
+    double srednyaArifmOcenka (Student sred){
+        double result = (sred.avrMathematic + sred.avrEnglish + sred.avrEconomic) /3;
+        return result;
+    }
+
+    double zzz (Student sred){
+        double result = sred.abc();
+        return result;
+    }
+
     public static void main(String[] args) {
 
         Student student1 = new Student();
@@ -23,7 +38,6 @@ class StudentTest {
         student1.avrMathematic = 4.8;
         student1.avrEconomic = 4.5;
         student1.avrEnglish = 5;
-        student1.avrAll = (student1.avrEconomic + student1.avrEnglish + student1.avrMathematic)/3;
 
         Student student2 = new Student();
         student2.StudentId = 2;
@@ -33,7 +47,6 @@ class StudentTest {
         student2.avrMathematic = 4.4;
         student2.avrEconomic = 5;
         student2.avrEnglish = 4.2;
-        student2.avrAll = (student2.avrEconomic + student2.avrEnglish + student2.avrMathematic)/3;
 
         Student student3 = new Student();
         student3.StudentId = 3;
@@ -43,7 +56,8 @@ class StudentTest {
         student3.avrMathematic = 4;
         student3.avrEconomic = 3;
         student3.avrEnglish = 4;
-        student3.avrAll = (student3.avrEconomic + student3.avrEnglish + student3.avrMathematic)/3;
+
+        StudentTest st = new StudentTest();
 
         System.out.println("Номер студенческого билета: " + student1.StudentId);
         System.out.println("Имя " + student1.firstName);
@@ -52,7 +66,9 @@ class StudentTest {
         System.out.println("Средняя оценка по матиматике " + student1.avrMathematic);
         System.out.println("Средняя оценка по экономике " + student1.avrEconomic);
         System.out.println("Средняя оценка по Английскому языку " + student1.avrEnglish);
-        System.out.println("Общая средняя оценка по всем предметам " + student1.avrAll);
+        System.out.println("Общая средняя оценка по всем трем предметам " + st.srednyaArifmOcenka(student1));
+        System.out.println("Второй вариант вызова средней оценки по трем предметам: " + student1.abc());
+        System.out.println("Третий вариант вызова средней оценки по трем предметам " + st.zzz(student1));
         System.out.println("---");
 
         System.out.println("Номер студенческого билета: " + student2.StudentId);
@@ -62,7 +78,9 @@ class StudentTest {
         System.out.println("Средняя оценка по матиматике " + student2.avrMathematic);
         System.out.println("Средняя оценка по экономике " + student2.avrEconomic);
         System.out.println("Средняя оценка по Английскому языку " + student2.avrEnglish);
-        System.out.println("Общая средняя оценка по всем предметам " + student2.avrAll);
+        System.out.println("Общая средняя оценка по всем трем предметам " + st.srednyaArifmOcenka(student2));
+        System.out.println("Второй вариант вызова средней оценки по трем предметам: " + student2.abc());
+        System.out.println("Третий вариант вызова средней оценки по трем предметам " + st.zzz(student2));
         System.out.println("---");
 
         System.out.println("Номер студенческого билета: " + student3.StudentId);
@@ -72,7 +90,10 @@ class StudentTest {
         System.out.println("Средняя оценка по матиматике " + student3.avrMathematic);
         System.out.println("Средняя оценка по экономике " + student3.avrEconomic);
         System.out.println("Средняя оценка по Английскому языку " + student3.avrEnglish);
-        System.out.println("Общая средняя оценка по всем предметам " + student3.avrAll);
+        System.out.println("Общая средняя оценка по всем трем предметам " + st.srednyaArifmOcenka(student3));
+        System.out.println("Второй вариант вызова средней оценки по трем предметам: " + student3.abc());
+        System.out.println("Третий вариант вызова средней оценки по трем предметам " + st.zzz(student3));
         System.out.println("---");
+
     }
 }
