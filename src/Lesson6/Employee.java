@@ -4,7 +4,7 @@ import Homework.Lesson5.Employe;
 
 public class Employee {
 
-    Employee(int id1, String surname1, int age1, double salary1, String department1) {
+     Employee(int id1, String surname1, int age1, double salary1, String department1) {
         id = id1;
         surname = surname1;
         age = age1;
@@ -12,11 +12,11 @@ public class Employee {
         department = department1;
     }
 
-    Employee(int id2, String surname2, int age2) {
+     Employee(int id2, String surname2, int age2) {
         this(id2, surname2, age2, 0.0, null);
     }
 
-    Employee(String surname3, int age3) {
+    public Employee(String surname3, int age3) {
         this(0, surname3, age3, 0.0, null);
     }
 
