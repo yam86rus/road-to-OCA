@@ -22,7 +22,7 @@ public class Employee {
 
 
     int id;
-    String surname;
+    public String surname;
     int age;
     double salary;
     String department;

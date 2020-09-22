@@ -1,12 +1,13 @@
 package Lesson4;
 
 public class Car {
-    Car(){
+    Car() {
         color = "Красный";
         engine = "V8";
     }
-    String color ;
-    String engine ;
+
+    String color;
+    String engine;
 
 }
 

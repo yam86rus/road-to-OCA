@@ -10,4 +10,5 @@ public class Lesson1 {
         System.out.println("                               О. Хайям");
     }
 
+
 }

@@ -13,15 +13,16 @@ public class Employee {
         id = id2;
     }
 
-    Employee(String surname2){
+    Employee(String surname2) {
         surname = surname2;
     }
 
-    private Employee(double salary2){
+    private Employee(double salary2) {
         salary = salary2;
     }
 
     public void showId() {
+
         System.out.println("ID: " + id);
     }
 
