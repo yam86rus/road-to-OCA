@@ -6,12 +6,13 @@ public class Car {
     int CLASS = 5;
     int String = 4;
     final int XYZ = 6;
+    public static int AA = 100;
 
     String color;
     String engine;
-    static int count;
+    public static int count;
 
-    Car(String color, String engine) {
+    public Car(String color, String engine) {
         count++;
         this.color = color;
         this.engine = engine;
