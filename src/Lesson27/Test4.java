@@ -8,7 +8,9 @@ public class Test4 {
         System.out.println("У нас есть массив");
 
         try {
-            FileInputStream fis = new FileInputStream(f);
+            FileInputStream fis = new FileInputStream(f); // данное выполнение мы контролировать фактически не можем
+
+            //checked Exception указывают на часть кода, который находится за пределами непосредственного контроля программой
             System.out.println(array[10]);
             System.out.println("Хорошего дня");
         }
@@ -26,8 +28,10 @@ public class Test4 {
 
 
         finally {
+            // Subclass Exception = checked Exception
             // все что будет написано в finally будет всегда обрабатываться
             System.out.println("Это finally block");
         }
+
     }
 }
