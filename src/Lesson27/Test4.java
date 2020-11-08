@@ -5,21 +5,21 @@ public class Test4 {
         File f = new File("test9.txt"); // создание абстрактного пути к файлу
 
         int[] array = {4, 8, 1};
-        System.out.println("У нас есть массив");
+//        System.out.println("У нас есть массив");
 
         try {
             FileInputStream fis = new FileInputStream(f); // данное выполнение мы контролировать фактически не можем
 
             //checked Exception указывают на часть кода, который находится за пределами непосредственного контроля программой
-            System.out.println(array[10]);
-            System.out.println("Хорошего дня");
+//            System.out.println(array[10]);
+//            System.out.println("Хорошего дня");
         }
 
         catch (FileNotFoundException e) {
-            System.out.println("Был пойман Exception: " + e);
+//            System.out.println("Был пойман Exception: " + e);
         }
         catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Был пойман второй Exception: " + e);
+//            System.out.println("Был пойман второй Exception: " + e);
         }
         // несколько catch блоков могут следовать друг за другом, но лишь 1 finally блок
         // может следовать за catch блоками
@@ -30,7 +30,7 @@ public class Test4 {
         finally {
             // Subclass Exception = checked Exception
             // все что будет написано в finally будет всегда обрабатываться
-            System.out.println("Это finally block");
+//            System.out.println("Это finally block");
         }
 
     }
